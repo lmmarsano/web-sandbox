@@ -1,0 +1,19 @@
+{
+  "name": "javascript-lao",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Error: no test specified && exit 1",
+    "build": "webpack --progress -p",
+    "watch": "webpack --progress -w",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "Luis Marsano <luis.marsano@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^4.17.4",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
