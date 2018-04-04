@@ -1,6 +1,6 @@
 'use strict'
 var students = []
-  , qHash = {}
+	, qHash = {}
   , message = ''
   , query
   , answer

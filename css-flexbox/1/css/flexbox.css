@@ -1,0 +1,13 @@
+/* =================================
+	Flexbox
+==================================== */
+
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	min-height: 50vh;
+}
+
+.item {
+	margin: auto;
+}

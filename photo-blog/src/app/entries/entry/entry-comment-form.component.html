@@ -1,0 +1,19 @@
+<form (submit)="onSubmit()" #commentForm="ngForm" novalidate="novalidate">
+  <div>
+    <label for="name">Name</label>
+    <input name="name" type="text" [(ngModel)]="name" required="required" #nameField="ngModel" [ngStyle]="{'outline-color': nameField.dirty && nameField.valid ? 'green' : undefined}"/>
+		<div class="alert alert-danger" *ngIf="(commentForm.submitted || nameField.touched) && nameField.errors">
+			<div [hidden]="!nameField.errors.required">Name is required</div>
+		</div>
+  </div>
+	<div>
+    <label for="comment">Comment</label>
+    <textarea name="comment" [(ngModel)]="comment" required="required" #commentField="ngModel" [ngStyle]="{'outline-color': commentField.dirty && commentField.valid ? 'green' : undefined}"></textarea>
+		<div class="alert alert-danger" *ngIf="(commentForm.submitted || commentField.touched) && commentField.errors">
+			<div [hidden]="!commentField.errors.required">Comment is required</div>
+		</div>
+	</div>
+	<div>
+    <button>Submit</button>
+	</div>
+</form>
